@@ -1,0 +1,119 @@
+body {
+    font-family: 'Merriweather', serif;
+    padding-top: 56px;
+}
+
+.skill-icon {
+    font-size: 3rem;
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #007bff, #6610f2, #6f42c1, #e83e8c, #dc3545, #fd7e14, #ffc107);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff !important;
+}
+
+.nav-link {
+    color: #495057 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+.hero-section,.header {
+    background-color: #dd95f3;
+}
+
+.profile-img {
+    max-width: 200px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.transition-scale {
+    transition: transform 0.3s ease;
+}
+
+.transition-scale:hover {
+    transform: scale(1.05);
+}
+
+.transition-slide-down {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideDown 0.5s ease forwards;
+}
+
+.transition-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.5s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item {
+    width: 300px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.gallery-item .card-body {
+    padding: 1rem;
+}
+
+.gallery-item .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-item .card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
