@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Singh Rajput</title>
+    <title>Ayush Singh Rajput - Commerce Student</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
@@ -42,31 +46,108 @@
     </nav>
 
     <section class="hero-section py-5" id="about">
+        <!-- Animated Background Elements -->
+        <div class="hero-bg-elements">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        
         <div class="container">
-            <div class="card shadow-lg border-0 overflow-hidden">
-                <div class="card-body p-0">
-                    <div class="row g-0">
-                        <div class="col-md-4 bg-primary d-flex align-items-center justify-content-center p-4">
-                            <img src="./images/profile.png" alt="Ayush Kumar"
-                                class="profile-img img-fluid rounded-circle transition-scale">
+            <div class="hero-content">
+                <!-- Main Hero Card -->
+                <div class="hero-card">
+                    <div class="hero-card-inner">
+                        <!-- Left Profile Section -->
+                        <div class="profile-section">
+                            <div class="profile-container">
+                                <div class="profile-ring">
+                                    <div class="profile-ring-inner">
+                                        <img src="./images/profile.png" alt="Ayush Kumar" class="profile-img">
+                                    </div>
+                                    <div class="profile-glow"></div>
+                                </div>
+                                <div class="profile-info">
+                                    <h3 class="profile-title">Student</h3>
+                                    <p class="profile-subtitle">Commerce Stream</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-4 p-5">
-                            <h1 class="display-4 text-gradient mb-3 transition-slide-down">I'm Ayush</h1>
-                            <p class="h3 mb-3 transition-slide-up">A <span class="fw-bold text-primary">sincere</span>
-                                student</p>
-                            <p class="h4 mb-4 transition-slide-up delay-1">
-                                I am currently studying in 11<sup>th</sup> standard at
-                                <em class="text-info">Sarvodaya Vidyalaya Mansarovar Garden</em>
-                            </p>
-                            <a href="https://maps.app.goo.gl/c1pUQCy3zZ9JSPF66"
-                                class="btn btn-primary btn-lg transition-scale">
-                                <i class="bi bi-geo-alt-fill me-2"></i>School Location
-                            </a>
+                        
+                        <!-- Center Content Section -->
+                        <div class="content-section">
+                            <div class="content-wrapper">
+                                <div class="greeting-text">
+                                    <span class="greeting">Hello, I'm</span>
+                                </div>
+                                <h1 class="hero-title">
+                                    <span class="title-line" data-text="AYUSH">AYUSH</span>
+                                    <span class="title-line" data-text="SINGH RAJPUT">SINGH RAJPUT</span>
+                                </h1>
+                                <div class="hero-subtitle">
+                                    <span class="typing-text">A dedicated Commerce Student</span>
+                                </div>
+                                <div class="hero-description">
+                                    <p>Currently pursuing 12<sup>th</sup> standard at</p>
+                                    <p class="school-name">Sarvodaya Vidyalaya Mansarovar Garden</p>
+                                </div>
+                                <div class="hero-actions">
+                                    <a href="https://maps.app.goo.gl/c1pUQCy3zZ9JSPF66" class="btn-hero primary">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        <span>School Location</span>
+                                        <div class="btn-glow"></div>
+                                    </a>
+                                    <a href="#contact" class="btn-hero secondary">
+                                        <i class="bi bi-envelope"></i>
+                                        <span>Contact Me</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-4 bg-secondary d-flex align-items-center justify-content-center p-4">
-                            <img src="./images/asr.jpg" alt="Ayush Kumar"
-                                class="profile-img img-fluid rounded-circle transition-scale">
+                        
+                        <!-- Right Profile Section -->
+                        <div class="profile-section">
+                            <div class="profile-container">
+                                <div class="profile-ring">
+                                    <div class="profile-ring-inner">
+                                        <img src="./images/asr.jpg" alt="Ayush Kumar" class="profile-img">
+                                    </div>
+                                    <div class="profile-glow"></div>
+                                </div>
+                                <div class="profile-info">
+                                    <h3 class="profile-title">Future</h3>
+                                    <p class="profile-subtitle">Business Leader</p>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Stats -->
+                <div class="floating-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">12<sup>th</sup></div>
+                        <div class="stat-label">Standard</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Commerce</div>
+                        <div class="stat-label">Stream</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2024</div>
+                        <div class="stat-label">Year</div>
                     </div>
                 </div>
             </div>
@@ -75,52 +156,70 @@
 
     <section class="py-5" id="skills">
         <div class="container">
-            <h2 class="text-center mb-5 text-gradient">My Skills</h2>
+            <h2 class="text-center mb-5 text-gradient">My Commerce Skills</h2>
             <div class="row g-4">
-                <div class="col-md-4 text-center">
-                    <img src="./images/html.png" alt="HTML" class="skill-icon mb-3">
-                    <h3 class="text-danger">HTML</h3>
-                    <p>Web Technologies</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Accounting" class="skill-icon">
+                        <h3 class="text-primary">Accounting</h3>
+                        <p>Financial Accounting & Bookkeeping</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/css-3.png" alt="CSS" class="skill-icon mb-3">
-                    <h3 class="text-info">CSS</h3>
-                    <p>Web Technologies</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Business Studies" class="skill-icon">
+                        <h3 class="text-success">Business Studies</h3>
+                        <p>Management & Business Operations</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/js.png" alt="JavaScript" class="skill-icon mb-3">
-                    <h3 class="text-warning">JavaScript</h3>
-                    <p>Web Technologies</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1570/1570887.png" alt="Economics" class="skill-icon">
+                        <h3 class="text-warning">Economics</h3>
+                        <p>Micro & Macro Economics</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/python.png" alt="Python" class="skill-icon mb-3">
-                    <h3 class="text-success">Python</h3>
-                    <p>Computer Programming Language</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Microsoft Excel" class="skill-icon">
+                        <h3 class="text-info">Microsoft Excel</h3>
+                        <p>Advanced Spreadsheet & Data Analysis</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/word.png" alt="Word" class="skill-icon mb-3">
-                    <h3 class="text-warning">Microsoft Word</h3>
-                    <p>Document Editing and Many More...</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" alt="Microsoft Word" class="skill-icon">
+                        <h3 class="text-danger">Microsoft Word</h3>
+                        <p>Document Creation & Business Writing</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/excel.png" alt="Excel" class="skill-icon mb-3">
-                    <h3 class="text-primary">Microsoft Excel</h3>
-                    <p>Spreadsheet Software</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/888/888883.png" alt="PowerPoint" class="skill-icon">
+                        <h3 class="text-primary">PowerPoint</h3>
+                        <p>Business Presentations & Reports</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/powerpoint.png" alt="PowerPoint" class="skill-icon mb-3">
-                    <h3 class="text-danger">Microsoft PowerPoint</h3>
-                    <p>Presentation Software</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1570/1570888.png" alt="Banking" class="skill-icon">
+                        <h3 class="text-success">Banking</h3>
+                        <p>Banking Operations & Finance</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/outlook.png" alt="Outlook" class="skill-icon mb-3">
-                    <h3 class="text-info">Microsoft Outlook</h3>
-                    <p>Email and Calendar</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055688.png" alt="Marketing" class="skill-icon">
+                        <h3 class="text-warning">Marketing</h3>
+                        <p>Digital Marketing & Sales</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/freefire.png" alt="Free Fire" class="skill-icon mb-3">
-                    <h3 class="text-success">Free Fire</h3>
-                    <p>Gaming</p>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="skill-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055689.png" alt="Computer Skills" class="skill-icon">
+                        <h3 class="text-info">Computer Skills</h3>
+                        <p>Basic Programming & IT</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,59 +228,223 @@
     <section class="gallery py-5" id="gallery">
         <div class="container">
             <h2 class="text-center mb-5 text-gradient">My Gallery</h2>
-            <div class="row g-4 justify-content-center" id="gallery-container">
-
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery-item">
+                            <img src="./images/image00001.jpeg" alt="Gallery Image 1" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5>Memories</h5>
+                                <p>Beautiful moments captured</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item">
+                            <img src="./images/image00002.jpeg" alt="Gallery Image 2" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5>Adventures</h5>
+                                <p>Exciting experiences</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item">
+                            <img src="./images/image00003.jpeg" alt="Gallery Image 3" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5>Friends</h5>
+                                <p>Great times with friends</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item">
+                            <img src="./images/image00004.jpeg" alt="Gallery Image 4" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5>School Life</h5>
+                                <p>Memorable school moments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
 
-    <section class="bg-light py-5" id="contact">
-        <div class="container text-center">
-            <h2 class="mb-4 text-gradient">Get In Touch</h2>
-            <a href="mailto:ayushkumar22102007@gmail.com" class="btn btn-primary mb-3">
-                <i class="bi bi-envelope"></i> Contact me
-            </a>
-            <div class="d-flex justify-content-center">
-                <a href="https://www.github.com/iayushrajput" class="me-3 text-dark"><i
-                        class="bi bi-github fs-3"></i></a>
-                <!-- <a href="https://www.linkedin.com/in/ideepakrajput" class="me-3 text-primary"><i
-                        class="bi bi-linkedin fs-3"></i></a> -->
-                <a href="https://www.facebook.com/harender.singht" class="me-3 text-primary"><i
-                        class="bi bi-facebook fs-3"></i></a>
-                <a href="https://www.instagram.com/i.ayushrajput" class="me-3 text-danger"><i
-                        class="bi bi-instagram fs-3"></i></a>
-                <a href="https://www.snapchat.com/ayushkumar20120" class="text-warning"><i
-                        class="bi bi-snapchat fs-3"></i></a>
+    <section class="contact-section py-5" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <h2 class="text-center mb-5 text-gradient">Get In Touch</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6 text-center">
+                                <div class="contact-item">
+                                    <i class="bi bi-envelope-fill contact-icon"></i>
+                                    <h4>Email Me</h4>
+                                    <p>ayushkumar22102007@gmail.com</p>
+                                    <a href="mailto:ayushkumar22102007@gmail.com" class="btn btn-outline-primary">
+                                        <i class="bi bi-envelope me-2"></i>Send Email
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <div class="contact-item">
+                                    <i class="bi bi-telephone-fill contact-icon"></i>
+                                    <h4>Call Me</h4>
+                                    <p>Available for projects</p>
+                                    <a href="tel:+919211343249" class="btn btn-outline-success">
+                                        <i class="bi bi-telephone me-2"></i>Call Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links mt-5">
+                            <h5 class="text-center mb-4">Follow Me</h5>
+                            <div class="d-flex justify-content-center flex-wrap gap-3">
+                                <a href="https://www.github.com/iayushrajput" class="social-link github">
+                                    <i class="bi bi-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.facebook.com/harender.singht" class="social-link facebook">
+                                    <i class="bi bi-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://www.instagram.com/i.ayushrajput" class="social-link instagram">
+                                    <i class="bi bi-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://www.snapchat.com/ayushkumar20120" class="social-link snapchat">
+                                    <i class="bi bi-snapchat"></i>
+                                    <span>Snapchat</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-dark text-light text-center py-3">
-        <p class="mb-0">&copy; 2024 Ayush Kumar</p>
+        <p class="mb-0">&copy; 2025 Ayush Kumar</p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const galleryItems = [
-            { src: './images/image00001.jpeg', title: 'Image 1', description: 'Description for Image 1' },
-            { src: './images/image00002.jpeg', title: 'Image 2', description: 'Description for Image 2' },
-            { src: './images/image00003.jpeg', title: 'Image 3', description: 'Description for Image 3' },
-            { src: './images/image00004.jpeg', title: 'Image 4', description: 'Description for Image 4' },
-        ];
-
-        const galleryContainer = document.getElementById('gallery-container');
-
-        galleryItems.forEach(item => {
-            const galleryItem = document.createElement('div');
-            galleryItem.className = 'gallery-item';
-            galleryItem.innerHTML = `
-                <div class="card h-100">
-                    <img src="${item.src}" class="card-img-top" alt="${item.title}">
-                </div>
-            `;
-            galleryContainer.appendChild(galleryItem);
+        // Initialize Swiper
+        const swiper = new Swiper('.gallery-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
         });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Futuristic typing effect
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect when page loads
+        window.addEventListener('load', function() {
+            const typingElement = document.querySelector('.typing-text');
+            if (typingElement) {
+                const text = typingElement.textContent;
+                typeWriter(typingElement, text, 150);
+            }
+        });
+
+        // Add parallax effect to floating shapes
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const shapes = document.querySelectorAll('.shape');
+            
+            shapes.forEach((shape, index) => {
+                const speed = 0.5 + (index * 0.1);
+                shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+            });
+        });
+
+        // Add mouse movement effect to hero card
+        const heroCard = document.querySelector('.hero-card');
+        if (heroCard) {
+            heroCard.addEventListener('mousemove', function(e) {
+                const rect = heroCard.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                heroCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            
+            heroCard.addEventListener('mouseleave', function() {
+                heroCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            });
+        }
     </script>
 </body>
 
