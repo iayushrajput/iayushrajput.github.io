@@ -238,6 +238,37 @@ body {
 
 .profile-container {
     text-align: center;
+    position: relative;
+}
+
+/* Corner Image in Profile Section */
+.profile-corner-image {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 120px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.3),
+        0 0 0 2px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    padding: 3px;
+    z-index: 10;
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+.profile-corner-image:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.corner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .profile-ring {
@@ -786,6 +817,62 @@ body {
     color: #764ba2;
 }
 
+/* QR Section */
+.qr-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 50px 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.qr-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+}
+
+.qr-card:hover {
+    box-shadow: 0 25px 70px rgba(102, 126, 234, 0.15);
+    transform: translateY(-5px);
+}
+
+.qr-form input {
+    padding: 12px 20px;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.qr-form input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    outline: none;
+}
+
+.qr-wrapper {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.qr-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.qr-note {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
 /* Contact Section */
 .contact-section {
     background: rgba(255, 255, 255, 0.95);
@@ -1017,6 +1104,13 @@ footer {
     .content-section {
         order: 1;
     }
+    
+    .profile-corner-image {
+        width: 100px;
+        height: 120px;
+        top: -5px;
+        right: -5px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1037,6 +1131,13 @@ footer {
     .profile-ring {
         width: 150px;
         height: 150px;
+    }
+    
+    .profile-corner-image {
+        width: 80px;
+        height: 100px;
+        top: 0;
+        right: 0;
     }
     
     .hero-actions {

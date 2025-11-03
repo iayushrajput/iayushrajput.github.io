@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Instagram ID → QR code</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, Segoe UI, Roboto, Arial;
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background: #f6f7fb;
+        margin: 0;
+      }
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(20, 30, 60, 0.08);
+        width: 360px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 0;
+        background: #111;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .qr-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+      }
+      .note {
+        font-size: 13px;
+        color: #555;
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
+    <!-- QRCode.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <h3 style="margin: 0 0 8px 0; text-align: center">Instagram → QR</h3>
+      <input
+        id="username"
+        placeholder="Enter Instagram username (with or without @)"
+        autofocus
+      />
+      <button id="make">Generate QR</button>
+      <div class="qr-wrap" id="qr"></div>
+      <div class="note">
+        Click the QR image to download PNG (right-click → Save as... if not
+        mobile).
+      </div>
+    </div>
+
+    <script>
+      const usernameInput = document.getElementById("username");
+      const makeBtn = document.getElementById("make");
+      const qrContainer = document.getElementById("qr");
+      let qrcodeInstance = null;
+
+      function normalize(u) {
+        if (!u) return "";
+        u = u.trim();
+        if (u.startsWith("@")) u = u.slice(1);
+        return u;
+      }
+
+      function makeURL(u) {
+        u = normalize(u);
+        return u ? `https://instagram.com/${u}` : "";
+      }
+
+      function clearQR() {
+        qrContainer.innerHTML = "";
+        qrcodeInstance = null;
+      }
+
+      function generate(u) {
+        clearQR();
+        const url = makeURL(u);
+        if (!url) return alert("Enter a username first.");
+        // create QRCode (QRCode.js will inject a <canvas> or <img>)
+        qrcodeInstance = new QRCode(qrContainer, {
+          text: url,
+          width: 240,
+          height: 240,
+          correctLevel: QRCode.CorrectLevel.M,
+        });
+        // allow click-to-download by converting canvas to image and linking
+        setTimeout(() => {
+          const canvas = qrContainer.querySelector("canvas");
+          if (canvas) {
+            const dataUrl = canvas.toDataURL("image/png");
+            const img = document.createElement("img");
+            img.src = dataUrl;
+            img.alt = url;
+            img.style.cursor = "pointer";
+            img.title = "Click to download";
+            img.addEventListener("click", () => {
+              const a = document.createElement("a");
+              a.href = dataUrl;
+              a.download = `${normalize(u)}_insta_qr.png`;
+              a.click();
+            });
+            qrContainer.innerHTML = "";
+            qrContainer.appendChild(img);
+          } else {
+            // fallback if library produced an <img> already
+            const producedImg = qrContainer.querySelector("img");
+            if (producedImg) {
+              producedImg.style.cursor = "pointer";
+              producedImg.title = url;
+              producedImg.addEventListener("click", () => {
+                // open in new tab where user can save
+                window.open(producedImg.src, "_blank");
+              });
+            }
+          }
+        }, 50);
+      }
+
+      makeBtn.addEventListener("click", () => generate(usernameInput.value));
+      usernameInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") generate(usernameInput.value);
+      });
+    </script>
+  </body>
+</html>
